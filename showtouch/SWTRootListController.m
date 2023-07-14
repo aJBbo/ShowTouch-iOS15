@@ -1,8 +1,8 @@
 #include "SWTRootListController.h"
 #import <UIKit/UIKit.h>
 
-#define kColorPath @"/var/mobile/Library/Preferences/com.lnx.showtouch.color.plist"
-#define kSettingsPath @"/var/mobile/Library/Preferences/com.lnx.showtouch.plist"
+#define kColorPath @"/var/jb/var/mobile/Library/Preferences/com.lnx.showtouch.color.plist"
+#define kSettingsPath @"/var/jb/var/mobile/Library/Preferences/com.lnx.showtouch.plist"
 #define kSettingsChangedNotification (CFStringRef)@"com.lnx.showtouch/ReloadPrefs"
 #define kColorChangedNotification (CFStringRef)@"com.lnx.showtouch/colorChanged"
 
@@ -27,6 +27,13 @@
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitter://user?screen_name=lonestarx"] options:[NSDictionary new] completionHandler:nil];
     else
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/LonestarX"] options:[NSDictionary new] completionHandler:nil];
+}
+
+- (void)open {
+    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter:"]])
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitter://user?screen_name=ajbbocydia"] options:[NSDictionary new] completionHandler:nil];
+    else
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/ajbbocydia"] options:[NSDictionary new] completionHandler:nil];
 }
 
 - (void)sendMail {

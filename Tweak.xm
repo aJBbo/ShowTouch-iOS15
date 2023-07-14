@@ -10,8 +10,8 @@
 #define kColorChangedNotification (CFStringRef)@"com.lnx.showtouch/colorChanged"
 #define kSettingsResetNotification (CFStringRef)@"com.lnx.showtouch/settingsReset"
 
-#define kColorPath @"/var/mobile/Library/Preferences/com.lnx.showtouch.color.plist"
-#define kSettingsPath @"/var/mobile/Library/Preferences/com.lnx.showtouch.plist"
+#define kColorPath @"/var/jb/var/mobile/Library/Preferences/com.lnx.showtouch.color.plist"
+#define kSettingsPath @"/var/jb/mobile/Library/Preferences/com.lnx.showtouch.plist"
 
 @interface TouchWindow : UIWindow
 @property (nonatomic, strong) NSTimer *hideTimer;

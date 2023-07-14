@@ -1,4 +1,10 @@
-TARGET = iphone:11.2:10.0
+ifeq ($(THEOS_PACKAGE_SCHEME),rootless)
+TARGET = iphone:16.2:15.0
+else
+TARGET = iphone:14.5:12.0
+endif
+
+ARCHS = arm64e arm64
 FINALPACKAGE=1
 DEBUG=0
 
